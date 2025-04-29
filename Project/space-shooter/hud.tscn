@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://b01vhbqwiqd5u"]
+
+[ext_resource type="Script" uid="uid://jgd7c01nvox4" path="res://hud.gd" id="1_64ctp"]
+[ext_resource type="FontFile" uid="uid://bb74vlhcv3i4r" path="res://kenney_space-shooter-redux/Bonus/kenvector_future.ttf" id="2_8sq4i"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_640wx"]
+font = ExtResource("2_8sq4i")
+font_size = 48
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_64ctp")
+
+[node name="Score" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "SCORE：9999"
+label_settings = SubResource("LabelSettings_640wx")
+horizontal_alignment = 1
