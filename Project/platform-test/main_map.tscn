@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dshtu530fcsp"]
+
+[ext_resource type="PackedScene" uid="uid://c0k538vjm3msl" path="res://building_1_platformer.tscn" id="1_5hk42"]
+[ext_resource type="Texture2D" uid="uid://bgnklnp7oyluw" path="res://resources/school map.jpg" id="1_dyl4d"]
+[ext_resource type="PackedScene" uid="uid://e5pgyvpvcnk1" path="res://cursor.tscn" id="3_ob7o4"]
+
+[node name="MainMap" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(561, 341)
+scale = Vector2(0.552978, 0.513184)
+texture = ExtResource("1_dyl4d")
+
+[node name="Building1Platformer" parent="Sprite2D" instance=ExtResource("1_5hk42")]
+position = Vector2(-282.109, 227.989)
+
+[node name="Cursor" parent="." instance=ExtResource("3_ob7o4")]
+position = Vector2(555, 376)
