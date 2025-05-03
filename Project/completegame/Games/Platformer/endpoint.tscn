@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://c8ibxb18rvmk6"]
+[gd_scene load_steps=7 format=3 uid="uid://ctdmsipuln3wq"]
 
-[ext_resource type="Script" uid="uid://c5vfx5xq5p74g" path="res://endpoint.gd" id="1_00psr"]
-[ext_resource type="Texture2D" uid="uid://r01jj37csy75" path="res://resources/craftpix-net-846754-free-green-zone-tileset-pixel-art/4 Animated objects/Chest_open.png" id="1_yrmw6"]
+[ext_resource type="Script" uid="uid://c5vfx5xq5p74g" path="res://Games/Platformer/Codes/endpoint.gd" id="1_00psr"]
+[ext_resource type="Texture2D" uid="uid://r01jj37csy75" path="res://Games/Platformer/resources/craftpix-net-846754-free-green-zone-tileset-pixel-art/4 Animated objects/Chest_open.png" id="1_yrmw6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_00psr"]
 size = Vector2(49, 35)

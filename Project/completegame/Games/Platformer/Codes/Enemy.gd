@@ -28,7 +28,7 @@ func flip():
 		speed = abs(speed) * -1
 
 func _on_hitbox_area_entered(area: Area2D):
-	if area.get_parent() is Player:
+	if area.get_parent() is Players:
 		if area.get_parent().global_position.y < $Hitbox.global_position.y - 10:
 			area.get_parent().bounce()
 			die()

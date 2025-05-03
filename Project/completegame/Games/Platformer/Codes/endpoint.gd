@@ -9,7 +9,7 @@ func activate():
 	victoried = true
 
 func _on_area_2d_area_entered(area: Area2D):
-	if area.get_parent() is Player && !victoried:
+	if area.get_parent() is Players && !victoried:
 		activate()
 
 func play_success():

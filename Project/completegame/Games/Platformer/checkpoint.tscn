@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://b57tnuj8164do"]
+[gd_scene load_steps=7 format=3 uid="uid://c2lf1gjx18gt"]
 
-[ext_resource type="Script" uid="uid://ds2mlp42ok3yp" path="res://checkpoint.gd" id="1_r6hke"]
-[ext_resource type="Texture2D" uid="uid://dljtkcm1iju8g" path="res://resources/craftpix-net-846754-free-green-zone-tileset-pixel-art/4 Animated objects/Fountain.png" id="2_r6hke"]
+[ext_resource type="Script" uid="uid://ds2mlp42ok3yp" path="res://Games/Platformer/Codes/checkpoint.gd" id="1_r6hke"]
+[ext_resource type="Texture2D" uid="uid://dljtkcm1iju8g" path="res://Games/Platformer/resources/craftpix-net-846754-free-green-zone-tileset-pixel-art/4 Animated objects/Fountain.png" id="2_r6hke"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s20m7"]
 size = Vector2(19.5, 33.25)

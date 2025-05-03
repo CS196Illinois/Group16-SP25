@@ -4,7 +4,7 @@ class_name GameManager
 
 static var current_checkpoint : Checkpoint
 
-static var player : Player
+static var player : Players
 
 
 static func respawn_player() :
