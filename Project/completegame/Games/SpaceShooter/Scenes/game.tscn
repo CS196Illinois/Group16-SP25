@@ -1,0 +1,90 @@
+[gd_scene load_steps=13 format=3 uid="uid://ix8857obwug"]
+
+[ext_resource type="Script" uid="uid://b07q1ndqg14k5" path="res://Games/SpaceShooter/Scripts/game.gd" id="1_80nbo"]
+[ext_resource type="PackedScene" uid="uid://ckqbrkrhn3652" path="res://Games/SpaceShooter/Scenes/player.tscn" id="2_e2o6t"]
+[ext_resource type="PackedScene" uid="uid://bfaiu2d1xd3ow" path="res://Games/SpaceShooter/Scenes/enemy.tscn" id="2_wowpa"]
+[ext_resource type="PackedScene" uid="uid://lcj16w16fjxu" path="res://Games/SpaceShooter/Scenes/diver_enemy.tscn" id="3_i6g32"]
+[ext_resource type="PackedScene" uid="uid://d0hrigt85mrht" path="res://Games/SpaceShooter/Scenes/extra_enemy.tscn" id="4_1l0tm"]
+[ext_resource type="AudioStream" uid="uid://rrnafgibnnta" path="res://Games/SpaceShooter/kenney_space-shooter-redux/Bonus/sfx_laser2.ogg" id="5_o5yvi"]
+[ext_resource type="AudioStream" uid="uid://timms1c6xyal" path="res://Games/SpaceShooter/kenney_space-shooter-redux/Bonus/sfx_shieldDown.ogg" id="6_rku1e"]
+[ext_resource type="AudioStream" uid="uid://d075h3mjjpckv" path="res://Games/SpaceShooter/kenney_space-shooter-redux/Bonus/sfx_lose.ogg" id="7_rfjv2"]
+[ext_resource type="Texture2D" uid="uid://doxhnd0s7hqrc" path="res://Games/SpaceShooter/kenney_space-shooter-redux/Backgrounds/purple.png" id="7_v158k"]
+[ext_resource type="PackedScene" uid="uid://c4cetc46qptt2" path="res://Games/SpaceShooter/hud.tscn" id="8_ahny0"]
+[ext_resource type="PackedScene" uid="uid://6js7ou1ska7s" path="res://Games/SpaceShooter/game_over_screen.tscn" id="9_bu54i"]
+
+[sub_resource type="GDScript" id="GDScript_ahny0"]
+script/source = "extends Camera2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_80nbo")
+enemy_scenes = Array[PackedScene]([ExtResource("2_wowpa"), ExtResource("3_i6g32"), ExtResource("4_1l0tm")])
+
+[node name="SFX" type="Node" parent="."]
+
+[node name="LaserSound" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("5_o5yvi")
+
+[node name="HitSound" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("6_rku1e")
+
+[node name="ExplodeSound" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("7_rfjv2")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(270, 518)
+script = SubResource("GDScript_ahny0")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(0, 960)
+
+[node name="PurpleStars" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture_repeat = 2
+position = Vector2(274, 488)
+texture = ExtResource("7_v158k")
+region_enabled = true
+region_rect = Rect2(0, 0, 540, 960)
+
+[node name="Player" parent="." groups=["player"] instance=ExtResource("2_e2o6t")]
+position = Vector2(-23, 91)
+
+[node name="EnemySpawnTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="LaserContainer" type="Node2D" parent="."]
+
+[node name="EnemyContainer" type="Node2D" parent="."]
+position = Vector2(-4, 5)
+
+[node name="UILayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="UILayer" instance=ExtResource("8_ahny0")]
+anchors_preset = -1
+anchor_top = 0.002
+anchor_right = 0.363
+offset_left = 496.0
+offset_top = -3.048
+offset_right = 492.062
+offset_bottom = 5.0
+grow_vertical = 1
+
+[node name="GameOverScreen" parent="UILayer" instance=ExtResource("9_bu54i")]
+visible = false
+offset_left = 499.0
+offset_top = 3.0
+offset_right = -491.0
+offset_bottom = -1.0
+
+[connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_enemy_spawn_timer_timeout"]

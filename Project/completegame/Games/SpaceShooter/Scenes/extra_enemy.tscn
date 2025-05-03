@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0hrigt85mrht"]
+
+[ext_resource type="PackedScene" uid="uid://bfaiu2d1xd3ow" path="res://Scenes/enemy.tscn" id="1_4by2r"]
+[ext_resource type="Texture2D" uid="uid://den2xfvngip6v" path="res://kenney_space-shooter-redux/PNG/Enemies/enemyRed5.png" id="2_o8117"]
+
+[node name="ExtraEnemy" instance=ExtResource("1_4by2r")]
+speed = 200
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_o8117")
+
+[node name="CollisionShape2D" parent="." index="1"]
+light_mask = 1
+visibility_layer = 1
+position = Vector2(0, -3)

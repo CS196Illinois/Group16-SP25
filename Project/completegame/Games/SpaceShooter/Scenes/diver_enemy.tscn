@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://lcj16w16fjxu"]
+
+[ext_resource type="PackedScene" uid="uid://bfaiu2d1xd3ow" path="res://Scenes/enemy.tscn" id="1_cmxwi"]
+[ext_resource type="Texture2D" uid="uid://i84wrpyc5qjt" path="res://kenney_space-shooter-redux/PNG/Enemies/enemyRed4.png" id="2_ywgmh"]
+
+[node name="DiverEnemy" instance=ExtResource("1_cmxwi")]
+speed = 350
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_ywgmh")
+
+[node name="CollisionShape2D" parent="." index="1"]
+light_mask = 1
+visibility_layer = 1
+position = Vector2(0, -1)

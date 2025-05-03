@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0ekiadgwy5yu"]
+
+[ext_resource type="Texture2D" uid="uid://dfq7mcof8nj6t" path="res://kenney_space-shooter-redux/PNG/Lasers/laserRed01.png" id="2_g6b45"]
+
+[sub_resource type="GDScript" id="GDScript_wowpa"]
+script/source = "extends Area2D
+
+@export var speed = 600
+
+func _physics_process(delta):
+	global_position.y += -speed * delta
+
+
+func _on_visible_on_screen_enabler_2d_screen_exited() -> void:
+	queue_free()
+
+func _on_area_entered(area: Area2D) -> void:
+	if area is Enemy:
+		area.die()
+		queue_free()
+"
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7vci3"]
+radius = 4.0
+height = 52.0
+
+[node name="Laser" type="Area2D"]
+collision_layer = 4
+collision_mask = 2
+script = SubResource("GDScript_wowpa")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -28)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_g6b45")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -28)
+shape = SubResource("CapsuleShape2D_7vci3")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(0, 11)
+scale = Vector2(0.6, 0.4)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

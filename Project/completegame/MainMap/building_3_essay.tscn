@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjevt1w406aof"]
+
+[ext_resource type="Script" uid="uid://c6un4d447jlka" path="res://MainMap/building_3_essay.gd" id="1_jojuc"]
+[ext_resource type="Texture2D" uid="uid://det2nwli22kjh" path="res://Button/Oval/Blue Oval Button .png" id="2_dgm86"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u1uwi"]
+size = Vector2(97, 48)
+
+[node name="Building3Essay" type="Area2D"]
+script = ExtResource("1_jojuc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(51, 25)
+scale = Vector2(0.133721, 0.144628)
+texture = ExtResource("2_dgm86")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(52, 24)
+shape = SubResource("RectangleShape2D_u1uwi")
