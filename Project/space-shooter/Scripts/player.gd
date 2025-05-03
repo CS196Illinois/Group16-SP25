@@ -31,6 +31,7 @@ func _physics_process(delta):
 	
 func shoot():
 	laser_shot.emit(laser_scene, muzzle.global_position)
+	
 
 func die():
 	killed.emit()
