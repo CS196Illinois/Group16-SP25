@@ -16,11 +16,11 @@ texture = ExtResource("1_p2squ")
 [node name="Building1Platformer" parent="." instance=ExtResource("2_350xn")]
 position = Vector2(769, 864)
 
-[node name="Cursor" parent="." instance=ExtResource("3_rrsye")]
-position = Vector2(716, 529)
-
 [node name="Building2SpaceShooter" parent="." instance=ExtResource("4_rrsye")]
 position = Vector2(683, 453)
 
 [node name="Building3Essay" parent="." instance=ExtResource("5_88jrr")]
-position = Vector2(438, 588)
+position = Vector2(420, 588)
+
+[node name="Cursor" parent="." instance=ExtResource("3_rrsye")]
+position = Vector2(716, 529)
