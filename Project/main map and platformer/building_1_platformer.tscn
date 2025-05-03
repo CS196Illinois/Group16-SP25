@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0k538vjm3msl"]
+
+[ext_resource type="Script" uid="uid://rq75b2873krc" path="res://Codes/building_1_platformer.gd" id="1_rpes1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_irubs"]
+size = Vector2(580, 257)
+
+[node name="Building1Platformer" type="Area2D" groups=["game_locations"]]
+script = ExtResource("1_rpes1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(280, 118.5)
+shape = SubResource("RectangleShape2D_irubs")

@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://e5pgyvpvcnk1"]
+
+[ext_resource type="Script" uid="uid://dq4dtr4ggo3aw" path="res://Codes/cursor.gd" id="1_fsq4c"]
+[ext_resource type="Texture2D" uid="uid://b41xpx1uwrpmj" path="res://resources/kenney_platformer-characters/PNG/Player/player_tilesheet.png" id="2_5l68f"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ydl3m"]
+radius = 46.0
+height = 120.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5l68f"]
+size = Vector2(83, 53)
+
+[node name="Cursor" type="CharacterBody2D"]
+script = ExtResource("1_fsq4c")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2, 3)
+scale = Vector2(1.29688, 1.35156)
+texture = ExtResource("2_5l68f")
+hframes = 9
+vframes = 3
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(3, 18)
+shape = SubResource("CapsuleShape2D_ydl3m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 9)
+shape = SubResource("RectangleShape2D_5l68f")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_exited"]
