@@ -10,7 +10,6 @@ func _ready():
 	if not is_connected("area_entered", Callable(self, "_on_area_entered")):
 		area_entered.connect(Callable(self, "_on_area_entered"))
 
-
 func _on_visible_on_screen_enabler_2d_screen_exited() -> void:
 	queue_free()
 	
