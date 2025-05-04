@@ -59,7 +59,8 @@ func _on_Buttonenter_pressed():
 		$fail.visible = true
 		
 func _on_success_pressed():
-	_reset_game()
+	#_reset_game()
+	get_tree().change_scene_to_file("res://MainMap/main_map.tscn")
 
 func _on_fail_pressed():
 	_reset_game()
