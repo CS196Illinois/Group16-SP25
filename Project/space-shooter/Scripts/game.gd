@@ -46,7 +46,6 @@ func _process(delta):
 		
 	pb.scroll_offset.y += delta*scroll_speed
 		
-		
 func _on_player_laser_shot(laser_scene, location):
 	var laser = laser_scene.instantiate()
 	laser.global_position = location
@@ -56,13 +55,21 @@ func _on_player_laser_shot(laser_scene, location):
 func _on_enemy_spawn_timer_timeout() -> void:
 	var e = enemy_scenes.pick_random().instantiate()
 	e.global_position = Vector2(randf_range(50, 500), -50)
+	print("Instantiated enemy node:", e)
+	print("Class name:", e.get_class())
+	print("Has method 'take_damage':", e.has_method("take_damage"))
+	print("Has signal 'killed':", "killed" in e.get_signal_list().map(func(s): return s.name))
+	print("Connected signals:")
+	
 	e.killed.connect(_on_enemy_killed)
 	e.hit.connect(_on_enemy_hit)
+	print("Signals connected to _on_enemy_killed and _on_enemy_hit")
+	
 	enemy_container.add_child(e)
 	
 func _on_enemy_killed():
+	print("Signal received: Enemy killed")
 	score += 100
-	print(score)
 	
 func _on_enemy_hit():
 	hit_sound.play()

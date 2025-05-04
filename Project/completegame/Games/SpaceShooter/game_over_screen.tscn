@@ -1,0 +1,98 @@
+[gd_scene load_steps=6 format=3 uid="uid://6js7ou1ska7s"]
+
+[ext_resource type="Script" path="res://Games/SpaceShooter/game_over_screen.gd" id="1_po3vx"]
+[ext_resource type="FontFile" uid="uid://bb74vlhcv3i4r" path="res://Games/SpaceShooter/kenney_space-shooter-redux/Bonus/kenvector_future.ttf" id="2_l4tlu"]
+
+[sub_resource type="GDScript" id="GDScript_fdghx"]
+script/source = "extends ColorRect
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2yv1s"]
+bg_color = Color(0.1701, 0.4767, 0.63, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_tmhko"]
+font = ExtResource("2_l4tlu")
+font_size = 33
+
+[node name="GameOverScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_po3vx")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.01, 0.01, 0.01, 0.490196)
+script = SubResource("GDScript_fdghx")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -147.0
+offset_top = -152.0
+offset_right = 155.0
+offset_bottom = 148.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2yv1s")
+
+[node name="GameOver" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -116.0
+offset_top = 42.0
+offset_right = 120.0
+offset_bottom = 80.0
+grow_horizontal = 2
+text = "Game Over"
+label_settings = SubResource("LabelSettings_tmhko")
+
+[node name="Score" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -125.0
+offset_top = 135.0
+offset_right = 133.0
+offset_bottom = 173.0
+grow_horizontal = 2
+text = "Score:9999"
+label_settings = SubResource("LabelSettings_tmhko")
+
+[node name="Restart" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -72.0
+offset_top = -97.0
+offset_right = 82.0
+offset_bottom = -49.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_l4tlu")
+theme_override_font_sizes/font_size = 35
+text = "RETRY"
+
+[connection signal="pressed" from="Panel/Restart" to="." method="_on_restart_pressed"]

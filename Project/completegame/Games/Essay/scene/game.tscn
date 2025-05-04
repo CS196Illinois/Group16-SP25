@@ -1,0 +1,386 @@
+[gd_scene load_steps=65 format=3 uid="uid://bio1gl5re56qa"]
+
+[ext_resource type="Texture2D" uid="uid://u4feim40iadn" path="res://Games/Essay/IMG_8515.PNG" id="1_5kiuu"]
+[ext_resource type="Script" uid="uid://c1u4dfnaafqbw" path="res://Games/Essay/scene/game.gd" id="1_17rxn"]
+[ext_resource type="Texture2D" uid="uid://dgxqy0nvk18rk" path="res://Games/Essay/p3.PNG" id="2_81276"]
+[ext_resource type="Texture2D" uid="uid://d2paofw2aevjx" path="res://Games/Essay/IMG_8517.PNG" id="2_dbls1"]
+[ext_resource type="Script" uid="uid://dttfbps3iqmlj" path="res://Games/Essay/scene/basebook.gd" id="3_33cqm"]
+[ext_resource type="Script" uid="uid://f8kg464dxlao" path="res://Games/Essay/scene/type.gd" id="3_p1ry8"]
+[ext_resource type="Texture2D" uid="uid://cxm2tr73mtsaa" path="res://Games/Essay/p4.PNG" id="3_ve786"]
+[ext_resource type="Texture2D" uid="uid://bhpd7kl7m84tq" path="res://Games/Essay/p5.PNG" id="4_0lu6w"]
+[ext_resource type="Script" uid="uid://b0u1sjkna6txs" path="res://Games/Essay/scene/style.gd" id="4_xlg7c"]
+[ext_resource type="Texture2D" uid="uid://d4l1cm8j8xd1o" path="res://Games/Essay/basis book.PNG" id="4_xwcet"]
+[ext_resource type="Texture2D" uid="uid://cqn8px1i8unn1" path="res://Games/Essay/success.PNG" id="5_i6gbm"]
+[ext_resource type="Texture2D" uid="uid://c0ansq8badjjg" path="res://Games/Essay/ButtonClear.PNG" id="5_p1ry8"]
+[ext_resource type="Script" uid="uid://db4lavlj033ch" path="res://Games/Essay/scene/reference.gd" id="5_qpk70"]
+[ext_resource type="Texture2D" uid="uid://bcfpk8onbhvv" path="res://Games/Essay/fail.PNG" id="6_ux4dc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d218c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xwcet"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p1ry8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xlg7c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_33cqm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_54mdx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qpk70"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ll5lq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_17rxn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yq8tf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0pyxt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ym5sv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sng2h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5g16k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_81276"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o16ra"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ve786"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0lu6w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i6gbm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ux4dc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mm2a7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jrd6n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jhlss"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ww6yf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1it6f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_imfdu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pp3pk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b8t8i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_355h4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ca6q5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_400sm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yerfe"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_abp7u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_he4o3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yk3to"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lip20"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0halo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8p2gu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kv4hp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0jy4g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_efr1a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x3x2e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c3n0e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c6ddg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u414g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0v3qn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3pnen"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gs7ni"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_saluk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sybv5"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_17rxn")
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+scale = Vector2(0.398507, 0.397531)
+texture = ExtResource("1_5kiuu")
+
+[node name="basis book" type="Sprite2D" parent="background"]
+position = Vector2(2.50937, 10.0621)
+scale = Vector2(0.997606, 1.00005)
+texture = ExtResource("4_xwcet")
+metadata/_edit_lock_ = true
+
+[node name="clean" type="Sprite2D" parent="background"]
+texture = ExtResource("5_p1ry8")
+metadata/_edit_lock_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.03, 1.03)
+metadata/_edit_lock_ = true
+
+[node name="basebook" type="Sprite2D" parent="."]
+scale = Vector2(0.387668, 0.387668)
+texture = ExtResource("2_dbls1")
+script = ExtResource("3_33cqm")
+
+[node name="style" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+scale = Vector2(0.398507, 0.397531)
+script = ExtResource("4_xlg7c")
+
+[node name="type" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+scale = Vector2(0.398507, 0.397531)
+script = ExtResource("3_p1ry8")
+
+[node name="reference" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+scale = Vector2(0.398507, 0.397531)
+script = ExtResource("5_qpk70")
+
+[node name="uibutton" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ButtonBook" type="Button" parent="uibutton"]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 11.0
+offset_right = 160.0
+offset_bottom = 19.0
+scale = Vector2(12.9067, 3.94526)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d218c")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_xwcet")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_p1ry8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_xlg7c")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_33cqm")
+toggle_mode = true
+
+[node name="ButtonFilm" type="Button" parent="uibutton"]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 75.0
+offset_right = 168.0
+offset_bottom = 83.0
+scale = Vector2(10.6947, -3.37971)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_54mdx")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_qpk70")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ll5lq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_17rxn")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yq8tf")
+toggle_mode = true
+
+[node name="ButtonPhoto" type="Button" parent="uibutton"]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 82.0
+offset_right = 242.0
+offset_bottom = 111.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0pyxt")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ym5sv")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_sng2h")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_5g16k")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_81276")
+toggle_mode = true
+
+[node name="narrative" type="Button" parent="uibutton"]
+z_index = 2
+layout_mode = 0
+offset_left = 4.0
+offset_top = 14.0
+offset_right = 44.0
+offset_bottom = 54.0
+scale = Vector2(2.99859, 0.903512)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_o16ra")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ve786")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_0lu6w")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_i6gbm")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ux4dc")
+toggle_mode = true
+
+[node name="argumentative" type="Button" parent="uibutton"]
+z_index = 2
+layout_mode = 0
+offset_left = -20.0
+offset_top = 53.0
+offset_right = 20.0
+offset_bottom = 93.0
+scale = Vector2(4.01592, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mm2a7")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_jrd6n")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jhlss")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ww6yf")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1it6f")
+toggle_mode = true
+
+[node name="research" type="Button" parent="uibutton"]
+z_index = 2
+layout_mode = 0
+offset_left = -131.0
+offset_top = 12.0
+offset_right = -91.0
+offset_bottom = 52.0
+scale = Vector2(2.86769, 0.880021)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_imfdu")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_pp3pk")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_b8t8i")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_355h4")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ca6q5")
+toggle_mode = true
+
+[node name="essay" type="Button" parent="uibutton"]
+z_index = 1
+layout_mode = 0
+offset_left = -133.0
+offset_top = 53.0
+offset_right = -93.0
+offset_bottom = 93.0
+scale = Vector2(2.5404, 1.05042)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_400sm")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_yerfe")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_abp7u")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_he4o3")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yk3to")
+toggle_mode = true
+
+[node name="ButtonClear" type="Button" parent="uibutton"]
+layout_mode = 0
+offset_left = -187.0
+offset_top = 113.0
+offset_right = -179.0
+offset_bottom = 121.0
+scale = Vector2(4.55685, 5.21594)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lip20")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_0halo")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8p2gu")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_kv4hp")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0jy4g")
+toggle_mode = true
+
+[node name="Assignment" type="Sprite2D" parent="."]
+
+[node name="Buttonstart" type="Button" parent="."]
+offset_left = 110.0
+offset_top = -217.0
+offset_right = 150.0
+offset_bottom = -177.0
+scale = Vector2(3.78076, 0.969864)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_efr1a")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_x3x2e")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_c3n0e")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_c6ddg")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_u414g")
+
+[node name="Buttonenter" type="Button" parent="."]
+offset_left = 186.0
+offset_top = 215.0
+offset_right = 194.0
+offset_bottom = 223.0
+scale = Vector2(14.7301, 8.00376)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0v3qn")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3pnen")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_gs7ni")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_saluk")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_sybv5")
+
+[node name="p3" type="TextureRect" parent="."]
+visible = false
+offset_left = -460.0
+offset_top = -358.0
+offset_right = 1700.0
+offset_bottom = 1262.0
+scale = Vector2(0.458277, 0.458277)
+mouse_filter = 2
+texture = ExtResource("2_81276")
+
+[node name="p4" type="TextureRect" parent="."]
+visible = false
+offset_left = -454.0
+offset_top = -355.0
+offset_right = 1706.0
+offset_bottom = 1265.0
+scale = Vector2(0.441839, 0.441839)
+mouse_filter = 2
+texture = ExtResource("3_ve786")
+
+[node name="p5" type="TextureRect" parent="."]
+visible = false
+offset_left = -442.0
+offset_top = -339.0
+offset_right = 1718.0
+offset_bottom = 1281.0
+scale = Vector2(0.42393, 0.42393)
+mouse_filter = 2
+texture = ExtResource("4_0lu6w")
+
+[node name="success" type="TextureButton" parent="."]
+visible = false
+offset_left = -421.0
+offset_top = -293.0
+offset_right = 1739.0
+offset_bottom = 1327.0
+scale = Vector2(0.379081, 0.379081)
+texture_normal = ExtResource("5_i6gbm")
+
+[node name="fail" type="TextureButton" parent="."]
+visible = false
+offset_left = -423.0
+offset_top = -290.0
+offset_right = 1737.0
+offset_bottom = 1330.0
+scale = Vector2(0.387276, 0.387276)
+texture_normal = ExtResource("6_ux4dc")
+
+[connection signal="pressed" from="uibutton/ButtonBook" to="." method="_on_button_book_pressed"]
+[connection signal="pressed" from="uibutton/ButtonBook" to="basebook" method="_on_button_book_pressed"]
+[connection signal="pressed" from="uibutton/ButtonBook" to="reference" method="_on_button_book_pressed"]
+[connection signal="pressed" from="uibutton/ButtonFilm" to="." method="_on_button_film_pressed"]
+[connection signal="pressed" from="uibutton/ButtonFilm" to="basebook" method="_on_button_film_pressed"]
+[connection signal="pressed" from="uibutton/ButtonFilm" to="reference" method="_on_button_film_pressed"]
+[connection signal="pressed" from="uibutton/ButtonPhoto" to="." method="_on_button_photo_pressed"]
+[connection signal="pressed" from="uibutton/ButtonPhoto" to="basebook" method="_on_button_photo_pressed"]
+[connection signal="pressed" from="uibutton/ButtonPhoto" to="reference" method="_on_button_photo_pressed"]
+[connection signal="pressed" from="uibutton/narrative" to="." method="_on_narrative_pressed"]
+[connection signal="pressed" from="uibutton/narrative" to="basebook" method="_on_narrative_pressed"]
+[connection signal="pressed" from="uibutton/narrative" to="style" method="_on_narrative_pressed"]
+[connection signal="pressed" from="uibutton/argumentative" to="." method="_on_argumentative_pressed"]
+[connection signal="pressed" from="uibutton/argumentative" to="basebook" method="_on_argumentative_pressed"]
+[connection signal="pressed" from="uibutton/argumentative" to="style" method="_on_argumentative_pressed"]
+[connection signal="pressed" from="uibutton/research" to="." method="_on_research_pressed"]
+[connection signal="pressed" from="uibutton/research" to="basebook" method="_on_research_pressed"]
+[connection signal="pressed" from="uibutton/research" to="type" method="_on_research_pressed"]
+[connection signal="pressed" from="uibutton/essay" to="." method="_on_essay_pressed"]
+[connection signal="pressed" from="uibutton/essay" to="basebook" method="_on_essay_pressed"]
+[connection signal="pressed" from="uibutton/essay" to="type" method="_on_essay_pressed"]
+[connection signal="pressed" from="uibutton/ButtonClear" to="basebook" method="_on_button_clear_pressed"]
+[connection signal="pressed" from="uibutton/ButtonClear" to="style" method="_on_button_clear_pressed"]
+[connection signal="pressed" from="uibutton/ButtonClear" to="type" method="_on_button_clear_pressed"]
+[connection signal="pressed" from="uibutton/ButtonClear" to="reference" method="_on_button_clear_pressed"]
+[connection signal="pressed" from="Buttonstart" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Buttonstart" to="." method="_on_buttonstart_pressed"]
+[connection signal="pressed" from="Buttonstart" to="." method="_on_Buttonstart_pressed"]
+[connection signal="pressed" from="Buttonenter" to="." method="_on_enter_pressed"]
+[connection signal="pressed" from="Buttonenter" to="." method="_on_Buttonenter_pressed"]
+[connection signal="pressed" from="success" to="." method="_on_success_pressed"]
+[connection signal="pressed" from="fail" to="." method="_on_fail_pressed"]

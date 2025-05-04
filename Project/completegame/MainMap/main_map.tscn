@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://brhf62ehqbs4f"]
+
+[ext_resource type="Texture2D" uid="uid://b2h0nqjjddi7b" path="res://school map.jpg" id="1_p2squ"]
+[ext_resource type="PackedScene" uid="uid://bqevcefp11mdn" path="res://MainMap/building_1_platformer.tscn" id="2_350xn"]
+[ext_resource type="PackedScene" uid="uid://gy2e7ihpxk3a" path="res://MainMap/cursor.tscn" id="3_rrsye"]
+[ext_resource type="PackedScene" uid="uid://c4nmc15dn6os5" path="res://MainMap/building_2_space_shooter.tscn" id="4_rrsye"]
+[ext_resource type="PackedScene" uid="uid://bjevt1w406aof" path="res://MainMap/building_3_essay.tscn" id="5_88jrr"]
+
+[node name="MainMap" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(716.438, 509.5)
+scale = Vector2(0.727661, 0.651693)
+texture = ExtResource("1_p2squ")
+
+[node name="Building1Platformer" parent="." instance=ExtResource("2_350xn")]
+position = Vector2(777, 812)
+
+[node name="Building2SpaceShooter" parent="." instance=ExtResource("4_rrsye")]
+position = Vector2(697, 452)
+
+[node name="Building3Essay" parent="." instance=ExtResource("5_88jrr")]
+position = Vector2(496, 590)
+
+[node name="Cursor" parent="." instance=ExtResource("3_rrsye")]
+position = Vector2(716, 529)

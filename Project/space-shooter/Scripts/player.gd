@@ -26,11 +26,12 @@ func _physics_process(delta):
 	velocity = direction * speed
 	move_and_slide()
 	
-	#global_position = global_position.clamp(Vector2(0,0), 
-	#Vector2(540, 960))
+	global_position = global_position.clamp(Vector2(-250, -850), 
+	Vector2(230, 80))
 	
 func shoot():
 	laser_shot.emit(laser_scene, muzzle.global_position)
+	
 
 func die():
 	killed.emit()
