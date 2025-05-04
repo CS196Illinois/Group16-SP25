@@ -35,7 +35,7 @@ func _ready():
 	
 func _process(delta):
 	if Input.is_action_just_pressed("quit"):
-		get_tree().quit()
+		get_tree().change_scene_to_file("res://MainMap/main_map.tscn")
 	elif Input.is_action_just_pressed("reset"):
 		get_tree().reload_current_scene()
 		

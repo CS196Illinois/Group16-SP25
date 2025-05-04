@@ -14,13 +14,13 @@ scale = Vector2(0.727661, 0.651693)
 texture = ExtResource("1_p2squ")
 
 [node name="Building1Platformer" parent="." instance=ExtResource("2_350xn")]
-position = Vector2(769, 864)
+position = Vector2(777, 812)
 
 [node name="Building2SpaceShooter" parent="." instance=ExtResource("4_rrsye")]
-position = Vector2(683, 453)
+position = Vector2(697, 452)
 
 [node name="Building3Essay" parent="." instance=ExtResource("5_88jrr")]
-position = Vector2(420, 588)
+position = Vector2(496, 590)
 
 [node name="Cursor" parent="." instance=ExtResource("3_rrsye")]
 position = Vector2(716, 529)

@@ -1,19 +1,19 @@
 [gd_scene load_steps=4 format=3 uid="uid://c4nmc15dn6os5"]
 
 [ext_resource type="Script" uid="uid://ddt88luygdpep" path="res://MainMap/Codes/building_2_space_shooter.gd" id="1_ev8oe"]
-[ext_resource type="Texture2D" uid="uid://dgeugf4vluhg7" path="res://Button/Polygon/Green Polygon Button.png" id="2_ejk1o"]
+[ext_resource type="Texture2D" uid="uid://bwqx1en7kmgru" path="res://MainMap/ChatGPT_Image_May_3_2025_09_25_43_PM.png" id="2_ejk1o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ejk1o"]
-size = Vector2(86, 42)
+size = Vector2(138, 87)
 
 [node name="Building2SpaceShooter" type="Area2D"]
 script = ExtResource("1_ev8oe")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(34, 13)
-scale = Vector2(0.133721, 0.169421)
+position = Vector2(19.5756, -7.81411)
+scale = Vector2(0.099511, 0.0999724)
 texture = ExtResource("2_ejk1o")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(33, 11)
+position = Vector2(18, -7.5)
 shape = SubResource("RectangleShape2D_ejk1o")

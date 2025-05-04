@@ -73,3 +73,7 @@ func _reset_game():
 	selected_type = ""
 	selected_style = ""
 	selected_ref = ""
+	
+func _input(event):
+	if event.is_action_pressed("ui_cancel"):  # ESC key is mapped to ui_cancel by default
+		get_tree().change_scene_to_file("res://MainMap/main_map.tscn")

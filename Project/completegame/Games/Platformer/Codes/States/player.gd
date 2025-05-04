@@ -140,4 +140,7 @@ func die() :
 func bounce():
 	velocity.y = -130  # bounce upward when killing enemy
 
+func _input(event):
+	if event.is_action_pressed("ui_cancel"):  # ESC key is mapped to ui_cancel by default
+		get_tree().change_scene_to_file("res://MainMap/main_map.tscn")
 #endregion
